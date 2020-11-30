@@ -12,10 +12,11 @@ function play(question,option,answer) {
   console.log(chalk.bold(question));
   console.log("\n");
   console.log(option);
-  console.log("\n");
+  console.log("\n"); 
   var currentanswer = readlineSync.question(chalk.cyan.bold("Choose the correct Option : "));
+  var currentanswers=currentanswer.toUpperCase()
   console.log('\n');
-  if(currentanswer === answer) {
+  if(currentanswers === answer) {
     console.log(chalk.green("RIGHT ANSWER"));
     
     score = score+1;
